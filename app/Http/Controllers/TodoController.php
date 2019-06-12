@@ -10,4 +10,8 @@ class TodoController extends Controller
     {
         return view('todo.index');
     }
+    public function update()
+    {
+        return '123';
+    }
 }
