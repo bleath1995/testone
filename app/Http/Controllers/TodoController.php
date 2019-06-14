@@ -14,7 +14,7 @@ class TodoController extends Controller
     public function update(Request $request)
     {
         $todo = new Todo();
-        $todo->title = $request->tltle;
+        $todo->title = $request->title;
         $todo->save();
 
         return $todo;
