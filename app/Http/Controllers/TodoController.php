@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Todo;
 
 class TodoController extends Controller
 {
@@ -10,8 +11,12 @@ class TodoController extends Controller
     {
         return view('todo.index');
     }
-    public function update()
+    public function update(Request $request)
     {
-        return '123';
+        $todo = new Todo();
+        $todo->title = $request->tltle;
+        $todo->save();
+
+        return $todo;
     }
 }
