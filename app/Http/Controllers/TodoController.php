@@ -28,7 +28,7 @@ class TodoController extends Controller
         //]);
 
         $todo = Todo::create($request->all());
-        return view('todo.index');
+        return redirect("/todo");
     }
     
 }
